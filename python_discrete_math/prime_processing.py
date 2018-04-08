@@ -50,18 +50,38 @@ def display_list_of_primes(list_of_primes):
 
 
 if __name__ == "__main__":
-    list_pr = []
-    list_pr = primes_in_range(2000, list_pr)
-
-    display_list_of_primes(list_pr)
-    list_pr = next_primes(1000, list_pr)
-    display_list_of_primes(list_pr)
-
-
-
-    # filename = "prime_list.txt"
-    # file = open(filename, 'a')
-    # for i in range(len(list_pr)):
-    #     file.write(str(list_pr[i]) + "\n")
+    # list_pr = []
+    # list_pr = primes_in_range(2000, list_pr)
     #
-    # file.close()
+    # display_list_of_primes(list_pr)
+    # list_pr = next_primes(50, list_pr)
+    # display_list_of_primes(list_pr)
+
+    print("Open file with prime numbers... ", end='')
+    filename = "prime_list.txt"
+    file = open(filename, 'r')
+    print("Done.")
+
+    print("Loading list of prime numbers... ", end='')
+    list_from_file = []
+    for line in file:
+        list_from_file.append(line)
+    file.close()
+    print("Done.")
+
+    print("Parsing list to int... ", end='')
+    list_from_file = [int(i.strip())for i in list_from_file]
+    print("Done.")
+
+    print("Calculating next prime numbers... ", end='')
+    list_from_file = next_primes(1000, list_from_file)
+    print("Done.")
+
+    print("Saving new list to file... ", end='')
+    file = open(filename, 'w')
+    for i in range(len(list_from_file)):
+        file.write(str(list_from_file[i]) + "\n")
+    file.close()
+    print("Done.")
+
+    print("End.")
