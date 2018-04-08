@@ -10,8 +10,8 @@ def relatively_primes(a, b):
         print("Numbers are not relatively prime.")
 
 
-if __name__ ==  "__main__":
-    a = ea.user_input()
-    b = ea.user_input()
+if __name__ == "__main__":
+    a = ea.input_integer()
+    b = ea.input_integer()
 
     relatively_primes(a, b)

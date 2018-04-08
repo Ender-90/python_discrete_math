@@ -1,4 +1,4 @@
-def input_function():
+def input_positive_integer():
     while True:
         try:
             int_input = int(input("Input a number: "))
@@ -28,6 +28,6 @@ def prime_factors(int_to_factors):
 
 
 if __name__ == "__main__":    
-    user_input = input_function()
+    user_input = input_positive_integer()
     print("")
     prime_factors(user_input)

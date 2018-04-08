@@ -24,7 +24,7 @@ def euclidean_algorithm(n, m):
     return result_list
 
 
-def user_input():
+def input_integer():
     while True:
         try:
             int_input = int(input("Input a number: "))
@@ -41,7 +41,7 @@ def euclidean_list_display(ls):
 
 
 if __name__ == "__main__":
-    a = user_input()
-    b = user_input()
+    a = input_integer()
+    b = input_integer()
     list_to_display = euclidean_algorithm(a, b)
     euclidean_list_display(list_to_display)
