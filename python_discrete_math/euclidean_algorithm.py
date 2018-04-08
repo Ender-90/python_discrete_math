@@ -33,7 +33,7 @@ def user_input():
             print("Please input an integer!")
 
             
-if __name__=="__main__":
+if __name__ == "__main__":
     a = user_input()
     b = user_input()
     list_to_display = euclidean_algorithm(a, b)

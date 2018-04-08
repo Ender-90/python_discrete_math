@@ -1,0 +1,1 @@
+﻿To run scripts you just need Python 3.6.4.
