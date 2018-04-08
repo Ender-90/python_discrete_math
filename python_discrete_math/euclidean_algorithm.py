@@ -32,9 +32,16 @@ def user_input():
         except ValueError:
             print("Please input an integer!")
 
-            
+
+def euclidean_list_display(ls):
+    print("")
+    print("NWD ({0},{1})".format(ls[0][0], ls[0][2]))
+    for i in range(0, len(ls) - 1):
+        print("{0} = {1} * {2} + {3}".format(ls[i][0], ls[i][1], ls[i][2], ls[i][3]))
+
+
 if __name__ == "__main__":
     a = user_input()
     b = user_input()
     list_to_display = euclidean_algorithm(a, b)
-    print(list_to_display)
+    euclidean_list_display(list_to_display)
