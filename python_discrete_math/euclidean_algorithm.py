@@ -45,3 +45,4 @@ if __name__ == "__main__":
     b = input_integer()
     list_to_display = euclidean_algorithm(a, b)
     euclidean_list_display(list_to_display)
+
