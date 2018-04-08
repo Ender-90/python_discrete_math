@@ -21,7 +21,6 @@ def euclidean_algorithm(n, m):
         b = result_list[-1][3]
         c = result_list[-1][2] % result_list[-1][3]
         result_list.append([a, a // b, b, c])
-
     return result_list
 
 
@@ -33,8 +32,9 @@ def user_input():
         except ValueError:
             print("Please input an integer!")
 
-
-a = user_input()
-b = user_input()
-list_to_display = euclidean_algorithm(a, b)
-print(list_to_display)
+            
+if __name__=="__main__":
+    a = user_input()
+    b = user_input()
+    list_to_display = euclidean_algorithm(a, b)
+    print(list_to_display)
