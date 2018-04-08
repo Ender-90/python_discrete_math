@@ -19,12 +19,19 @@ def fast_phi(a):
         result *= (prime_list[i][0] ** (prime_list[i][1] - 1)) * (prime_list[i][0] - 1)
     return result
 
+
 if __name__ == "__main__":
-    print(phi(8))
-    print(phi(27))
-    print(fast_phi(27))
-    print(phi(100))
-    print(fast_phi(100))
-    print(phi(23554325))
-    print(fast_phi(23554325))
-    print(fast_phi(45784789887457))
+    # print(fast_phi(98))
+    # print(fast_phi(99))
+    # print(phi(8))
+    # print(phi(27))
+    # print(fast_phi(27))
+    # print(phi(100))
+    # print(fast_phi(100))
+    # print(phi(23554325))
+    # print(fast_phi(23554325))
+    # print(fast_phi(45784789887457))
+    user_input = pf.input_positive_integer()
+
+    print("Result of calculating Euler's totient function (faster mode):  {}".format(fast_phi(user_input)))
+    print("Result of calculating Euler's totient function (slower mode):  {}".format(phi(user_input)))
