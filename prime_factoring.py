@@ -27,6 +27,7 @@ def prime_factors(int_to_factors):
     print("{0:{1}} |". format(1, width))
 
 
-user_input = input_function()
-print("")
-prime_factors(user_input)
+if __name__ == "__main__":    
+    user_input = input_function()
+    print("")
+    prime_factors(user_input)
